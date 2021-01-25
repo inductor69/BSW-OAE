@@ -99,7 +99,7 @@
               <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                 <div class="p-4 flex flex-row items-center justify-between">
                   <a href="./index.html" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
-                      <img src="./images/bsw_logo.svg">
+                      <img src="./images/bsw_logo.svg" alt="Board of Student Welfare logo">
                   </a>
                   <h1 class= "text-gray-900 font-black text-3xl sm:text-3xl ml-2 " >Board for Student Welfare</h1>
 
@@ -114,23 +114,9 @@
                   <a class="px-4 py-2 mt-2 text-lg font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./index.html">Home</a>
                   <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./index.html#about">About Us</a>
                   <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./index.html#about">Accomodation </a>
-
-                  <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#contact">Contact Us</a>
-                  <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                    <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-lg font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                      <span>Resources</span>
-                      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
-                      <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
-                        <a class="block px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./resources.html">People with disabilities</a>
-
-                        <a class="block px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Students</a>
-                        <a class="block px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Volunteers</a>
-                        <a class="block px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./resources_faculty.html">Faculty</a>
-                      </div>
-                    </div>
-                  </div>    
+                  <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./resources.html">Resources</a>                                     
+                  <a target = "_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScMoZJ0YKrdRrY20340RT3fIYhS66RVm62RRb_H5SrCipUOIQ/viewform"
+                   class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#contact">Contact Us</a>                    
                 </nav>
               </div>
             </div>
@@ -148,31 +134,33 @@
 
                     <h1 class="text colora font-semibold text-xl sm:text-4xl leading-tight relative mb-1 xl:mb-1  ">Welcome!</h1>
                     <div class="flex items-center">
-
-                    <h1 class="text colors font-bold text-4xl letter leading-tight relative mb-1 xl:mb-1  ">O</h1></br>
-                    <h1 class="text colora font-semibold text-2xl sm:text-5xl  relative mb-1 xl:mb-1  ">ffice of </h1>
+                   <h1><span class="text colors font-bold text-4xl letter leading-tight relative mb-1 xl:mb-1  ">O</span><span class="text colora font-semibold text-2x1 sm:text-5xl  relative mb-1 xl:mb-1  ">ffice of </span>
+                      </br> <span class="text colors font-bold text-4xl letter leading-tight relative mb-1 xl:mb-1  ">A</span><span class="text colora font-semibold text-2x1 sm:text-5xl  relative mb-1 xl:mb-1  ">ccessible </span>
+                     </br>  <span class="text colors font-bold text-4xl letter leading-tight relative mb-1 xl:mb-1  ">E</span><span class="text colora font-semibold text-2x1 sm:text-5xl  relative mb-1 xl:mb-1  ">ducation </span>
+                   </h1>
+                    <!-- <h1 class="text colors font-bold text-4xl letter leading-tight relative mb-1 xl:mb-1  ">O</h1></br>
+                    <h1 class="text colora font-semibold text-2xl sm:text-5xl  relative mb-1 xl:mb-1  ">ffice of </h1>-->
                 </div>
 
-                <div class="flex items-center">
-
+               <!-- <div class="flex items-center">
+                     <h1><span class="text colors font-bold text-4xl letter leading-tight relative mb-1 xl:mb-1  ">A</span><span class="text colora font-semibold text-2x1 sm:text-5xl  relative mb-1 xl:mb-1  ">ccessible </span></h1>
                     <h1 class="text colors font-bold text-3xl letter leading-tight relative mb-1 xl:mb-1  ">A</h1></br>
                     <h1 class="text colora font-semibold text-2xl sm:text-5xl  relative mb-1 xl:mb-1  ">ccessible </h1>
                 </div> 
                 <div class="flex items-center">
-
-                    <h1 class="text colors font-bold text-3xl letter leading-tight relative mb-1xl:mb-1  ">E</h1></br>
+                    <h1><span class="text colors font-bold text-4xl letter leading-tight relative mb-1 xl:mb-1  ">E</span><span class="text colora font-semibold text-2x1 sm:text-5xl  relative mb-1 xl:mb-1  ">ducation </span></h1>
+                    <!--<h1 class="text colors font-bold text-3xl letter leading-tight relative mb-1xl:mb-1  ">E</h1></br>
                     <h1 class="text colora font-semibold text-2xl sm:text-5xl  relative mb-1 xl:mb-1  ">ducation </h1>
-                </div>      
-            </br> 
-                             <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSckQJSjaJQzCRqu-bjNnoDjqowykrcCtlc18nQCEFAXFO0jfA/viewform"
+                </div>  -->     
+                   <p  class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-16 mt-3 text-justify"> The attached form is meant for registration at the OAE office. To avail the various services, you need to register and connect with the office. After filling this, you will be added to a mailing list and will be updated regularly through that. Give us an opportunity to help you out. The information shared on this platform will remain confidential.</p>
+                             
+                    <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSckQJSjaJQzCRqu-bjNnoDjqowykrcCtlc18nQCEFAXFO0jfA/viewform"
                         class="mt-0 sm:mt-1 px-12 py-4 rounded-full  fold-bold text-base coloring shadow-xl text-white border-t border-gray-200 w-auto font-bold relative self-start inline-block lg:mx-0 mx-auto">Register Now</a>
-                        <p style=" text-align:left ;" class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-16 mt-3"> The attached form is meant for registration at the OAE office. To avail the various services, you need to register and connect with the office. After filling this, you will be added to a mailing list and will be updated regularly through that. Give us an opportunity to help you out. The information shared on this platform will remain confidential.</p>
-
-                </div>
-                    <div class="lg:absolute max-w-4xl xl:max-w-5xl right-0 container lg:w-screen w-full">
                         
-                        <img src="images/home1.svg"
-                            >
+                </div>
+                    <div class="lg:absolute max-w-4xl xl:max-w-5xl right-0 container lg:w-screen w-full"> 
+                        
+                        <img src="images/home1.svg">
                     </div>
                
             </div>
@@ -188,8 +176,8 @@
         <div class="sm:w-5/12 relative z-10">
         <img src= "images/yeah.svg">       </div>
         <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-auto mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
-            <h1 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">About Us</h1>
-            <p class="lg:text-lg mb-4 sm:mb-12 text-blue-900">The Office of Accessible Education (OAE) aspires to cater the needs of differently abled persons. We aim at providing a comprehensive and accessible environment to make your journey at IIT Delhi comfortable and hassle-free. Special assistance varying from academics to infrastructure requirements are taken care of by the department. We spare no efforts in helping you to find your true potential and excelling academically and vocationally alongside having a memorable stay at IIT Delhi.</p>
+            <h2 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">About Us</h1>
+            <p class="lg:text-lg mb-4 sm:mb-12 text-blue-900 text-justify">The Office of Accessible Education (OAE) aspires to cater the needs of differently abled persons. We aim at providing a comprehensive and accessible environment to make your journey at IIT Delhi comfortable and hassle-free. Special assistance varying from academics to infrastructure requirements are taken care of by the department. We spare no efforts in helping you to find your true potential and excelling academically and vocationally alongside having a memorable stay at IIT Delhi.</p>
         </div>
     </div>
 </main>
@@ -200,89 +188,22 @@
         <!-- BEGIN FEATURES SECTION -->
         <div class="flex justify-center">
 
-<h1  id="acco" class= "text-semibold font-black lettermid sm:text-3xl  "> Accomodation & Policies </h1>
+<h2  id="acco" class= "text-semibold font-black lettermid sm:text-3xl  "> Accomodation & Policies </h2>
 
         </div>
-        <div class="flex justify-center">
-
-        <h2  class= "text-gray-800 ml-16 mb-1 mr-16 text-2xl	dark:text-gray-800 "> OAE provides various support to the students of IIT Delhi. Some of them are listed below - </h2>
-    </div>
-
-        </br>
        <!-- This is an example component -->
 <div class="mx-14 pt-15">
-   <div class="grid gap-6 mb-1 md:grid-cols-1">
-              <div class="min-w-0 p-4 bg-white ">
-                <h4 class="mb-1 mt-2 ml-16 mr-16 font-semibold lettermid1 ">
-                    Assistive Technology Resources (Hardwares and Softwares)
-                </h4>
-                <p class="text-gray-800 ml-16 mb-1 mr-16 text-xl	dark:text-gray-800">
-                    The institute provides both hardware and software resources to enable the students and achieve their maximum potential.
+   <h4  class= "text-gray-800 ml-16 mb-1 mr-16 text-2xl	dark:text-gray-800 "> OAE provides various support to the students of IIT Delhi. Some of them are listed below - </h4>
+              
+                    <ol class= "text-gray-800 ml-16 mb-1 mr-16 text-xl	dark:text-gray-400" >
+                      <li>1. Assistive technology resources (Hardware and Software) </li>
+                      <li>2. Study material in accessible format</li>
+                      <li>3. Scribe and compensatory time provision during the examination</li>
+                      <li>4. eRikshaw for moving across the IITD campus </li>
+                      <li>5. Training of various assistive technologies </li>
+                    </ol>    
+            <p class="text-gray-800 ml-16 mb-1 mr-16 text-xl	dark:text-gray-800" lg:justify> The above list is just an indicative of the services OAE is providing to the students with disability. We are working towards adding more and more accommodations. If you need any support which is not listed above, please feel free to reach us. </p>
 
-                </p><a href="./resources.html">
-                <p class="text-blue-800 ml-16 mb-1 mr-16 text-xl	dark:text-blue-800">
-Click here to access Resources
-                </p></a>
-              </div>
-            
-            </div>
-</div>
-<div class="mx-14 pt-15">
-   <div class="grid gap-6 mb-1 md:grid-cols-1">
-              <div class="min-w-0 p-4  coloring1">
-                <h4 class="mb-1 mt-1 ml-16 mr-16 font-semibold lettermid1 text-black dark:text-black">
-                    Study material in accessible format
-                </h4>
-                <p class="text-gray-800 ml-16 mb-1 mr-16 text-xl	dark:text-gray-400">
-                    We aim to provide study materials in formats that are accessible and convenient to all the students.
-                </p>
-              </div>
-            
-            </div>
-</div>
-<div class="mx-14 pt-15">
-   <div class="grid gap-6 mb-1 md:grid-cols-1">
-              <div class="min-w-0 p-4 bg-white ">
-                <h4 class="mb-4 mt-2 ml-16 mr-16 font-semibold lettermid1 text-black dark:text-black">
-                    Scribe and compensatory time provision during the examination
-                </h4>
-                <p class="text-gray-800 ml-16 mb-1 mr-16 text-xl	dark:text-gray-400">
-                    Solutions such as provision of scribe and giving extra time during examinations to make assessments fair and more inclusive 
-
-                </p>
-              </div>
-            
-            </div>
-</div>
-<div class="mx-14 pt-15">
-   <div class="grid gap-6 mb-1 md:grid-cols-1">
-              <div class="min-w-0 p-4  coloring1">
-                <h4 class="mb-4 mt-2 ml-16 mr-16 font-semibold lettermid1 text-black dark:text-black">
-                    eRickshaw for moving across the IIT D campus
-
-                </h4>
-                <p class="text-gray-800 ml-16 mb-1 mr-16 text-xl	dark:text-gray-400">
-                    The campus has a network of e-rickshaws present at multiple locations and with on-demand services to assist students in their commute.
-
-                </p>
-              </div>
-            
-            </div>
-</div>
-<div class="mx-14 pt-15">
-   <div class="grid gap-6 mb-1 md:grid-cols-1">
-              <div class="min-w-0 p-4 bg-white ">
-                <h4 class="mb-4 mt-2 ml-16 mr-16 font-semibold lettermid1 text-black dark:text-black">
-                    Training of various assistive technologies
-
-                </h4>
-                <p class="text-gray-800 ml-16 mr-16 mb-1 text-xl	  dark:text-gray-400">
-                    We provide training of various assistive technologies to enhance the capabilities and equip the students  with all the advancements of the current time. 
-
-                </p>
-              </div>
-            
-            </div>
 </div>
 
 
@@ -296,8 +217,8 @@ Click here to access Resources
         <ul class="md:flex items-center flex justify-center md:space-x-8">
         <li class="flex flex-col items-center space-y-2 mb-1 ">
                 <div class=" rounded-full p-1 items-center">
-                    <a class="block bg-white p-1 rounded-full transform transition hover:-rotate-12 duration-300" href="#">
-                    <img  src="./images/clg.jpg" alt="image">
+                    <a class="block bg-white p-1 rounded-full transform transition hover:-rotate-12 duration-300" target = "_blank" href="http://xrcvc.org/">
+                    <img  src="./images/clg.jpg" alt="XRCVC">
                     </a>
                 </div>
                 <p class="text-2xl sm:text-3xl text-gray-800 dark:text-white font-medium tracking-tight ">The Xavier's Resource Center for the visually
@@ -307,7 +228,7 @@ Click here to access Resources
           
       
         </ul>
-        <div class="relative flex items-top justify-center   coloring1 bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
+        <!-- <div class="relative flex items-top justify-center   coloring1 bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
         <div id="contact" class="max-w-6xl mx-auto mt-10 mb-10 sm:px-6 lg:px-8">
             <div class="mt-8 overflow-hidden">
                 <div class="grid grid-cols-1 md:grid-cols-2">
@@ -332,6 +253,11 @@ Click here to access Resources
                             <label for="email" class="hidden">Email</label>
                             <input type="email" name="entry.655766055" name="email" id="email" placeholder="Email" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none">
                         </div>
+                         
+                        <div class="flex flex-col mt-2">
+                            <label for="entrynumber" class="hidden">Entry Number</label>
+                            <input type="entrynumber" name="entry.655766055" name="entrynumber" id="entrynumber" placeholder="Entry Number" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none">
+                        </div>
 
                         <div class="flex flex-col mt-2">
                             <label for="message" class="hidden">Type down your query</label>
@@ -347,7 +273,7 @@ Click here to access Resources
                 </div>
             </div>
         </div>
-    </div>
+    </div> --> 
     
 <div id="contact" class="flex justify-around items-center ">
 
@@ -355,42 +281,42 @@ Click here to access Resources
     
             </div>
     
-            </br>
+           
             <ul class="md:flex items-center flex justify-around md:space-x-8 mb-12">
                 <li class="flex flex-col items-center ml-20">
                         <div class="bg-gradient-to-tr from-yellow-500 to-pink-600 rounded-full p-1">
-                            <img class="h-32 w-32 rounded-full" src="./images/president.jpg" alt="image">
-                        </div><a href="mailto:reetika@hss.iitd.ac.in">
+                            <img class="h-32 w-32 rounded-full" src="./images/president.jpg" alt="Reetika Khera President BSW">
+                        </div><!-- <a href="mailto:reetika@hss.iitd.ac.in"> -->
                         <p class="text-2xl sm:text-3xl text-blue-800 dark:text-white font-medium tracking-tight">Reetika Khera</p></a>
                         <p class="text-xl sm:text-2xl text-gray-800 dark:text-white font-medium tracking-tight">President, BSW</p>
-                        <p class="text-xl sm:text-2xl text-gray-800 dark:text-white font-medium tracking-tight">+(91)-11-2659-7319</p>
-
+                        <p class="text-xl sm:text-2xl text-gray-800 dark:text-white font-medium tracking-tight">+91 11 2659 7319</p>
+                        <p class="text-xl sm:text-2xl text-gray-800 dark:text-white font-medium tracking-tight"><a href="mailto:reetika@hss.iitd.ac.in">reetika@hss.iitd.ac.in</a></p>
 
                     </li>
                     <li class="flex flex-col items-center ">
                         <div class="bg-gradient-to-tr from-yellow-500 to-pink-600 rounded-full p-1">
 
-                            <img class="h-32 w-32 rounded-full" src="./images/prof.jpg" alt="image">
+                            <img class="h-32 w-32 rounded-full" src="./images/prof.jpg" alt="Vikram Singh Faculty Incharge of students with Benchmark Disabilities ">
                       
-                    </div><a href="mailto:vs225@chemical.iitd.ac.in">
+                    </div>
                     <p class="text-2xl sm:text-3xl text-blue-800 dark:text-white font-medium tracking-tight ">Vikram Singh                        </p></a>
-                    <p class="text-xl sm:text-2xl text-gray-800 dark:text-white font-medium tracking-tight ">Faculty In-charge of Specially-abled students                       </p>
+                    <p class="text-xl sm:text-2xl text-gray-800 dark:text-white font-medium tracking-tight ">Faculty In-charge of students with Benchmark Disabilities </p>
 
                     <p class="text-xl sm:text-2xl text-gray-800 dark:text-white font-medium tracking-tight ">+91 11 2659 1030                      </p>
-                     
+                    <p class="text-xl sm:text-2xl text-gray-800 dark:text-white font-medium tracking-tight "><a href="mailto:vs225@chemical.iitd.ac.in"> vs225@chemical.iitd.ac.in</a> </p>
                     </li>
                    
                     <li class="flex flex-col items-center  ">
                         <div class="bg-gradient-to-tr from-yellow-500 to-pink-600 rounded-full p-1 ">
 
-                            <img class="h-32 w-32 rounded-full" src="./images/vicepresident.jpg" alt="image">
-                        </div><a href="mailto:ppingole@chemistry.iitd.ac.in">
+                            <img class="h-32 w-32 rounded-full" src="./images/vicepresident.jpg" alt="Pravin Ingole Vice President BSW">
+                        </div>
                         <p class="text-2xl sm:text-3xl text-blue-800 dark:text-white font-medium tracking-tight">Pravin Ingole 
                         </p></a>
                         <p class="text-xl sm:text-2xl text-gray-800 dark:text-white font-medium tracking-tight">Vice-President, BSW
                         </p>
                         <p class="text-xl sm:text-2xl text-gray-800 dark:text-white font-medium tracking-tight ">+91 11 2659 7547                     </p>
-
+                         <p class="text-xl sm:text-2xl text-gray-800 dark:text-white font-medium tracking-tight "><a href="mailto:ppingole@chemistry.iitd.ac.in">ppingole@chemistry.iitd.ac.in</a></p>
                     </li>
                 </ul>
     

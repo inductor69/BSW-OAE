@@ -1,0 +1,17 @@
+   <style1>
+             a:link, a:visited {
+            background-color:#FF69B4;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            }
+
+            a:hover, a:active {
+            background-color: hotpink;
+            }            
+        .bottom-three {
+             margin-bottom: 5cm;
+          }
+</style1> 

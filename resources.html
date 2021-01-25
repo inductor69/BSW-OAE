@@ -115,6 +115,7 @@
                 cursor: pointer;
             }
         </style>
+
     </head>
 
     <body >
@@ -124,7 +125,7 @@
               <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                 <div class="p-4 flex flex-row items-center justify-between">
                   <a href="./index.html" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
-                      <img src="./images/bsw_logo.svg">
+                      <img src="./images/bsw_logo.svg" alt="Board of Student Welfare logo">
                   </a>
                   <h1 class= "text-gray-900 font-black text-3xl sm:text-3xl ml-2 " >Board for Student Welfare</h1>
 
@@ -139,23 +140,10 @@
                   <a class="px-4 py-2 mt-2 text-lg font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./index.html">Home</a>
                   <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./index.html#about">About Us</a>
                   <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./index.html#about">Accomodation </a>
-
-                  <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#features">Contact Us</a>
-                  <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                    <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-lg font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                      <span>Resources</span>
-                      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
-                      <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
-                        <a class="block px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./resources.html">People with disabilities</a>
-
-                        <a class="block px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Students</a>
-                        <a class="block px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Volunteers</a>
-                        <a class="block px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./resources_faculty.html">Faculty</a>
-                      </div>
-                    </div>
-                  </div>    
+                  
+                  <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./resources.html">Resources</a>  
+                  <a target = "_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScMoZJ0YKrdRrY20340RT3fIYhS66RVm62RRb_H5SrCipUOIQ/viewform"
+                   class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#contact">Contact Us</a>  
                 </nav>
               </div>
             </div>
@@ -172,17 +160,13 @@
                     class="flex flex-col items-center lg:items-start w-full max-w-xl pt-48 lg:pt-20 xl:pt-60 text-center lg:text-left z-30 ">
 
                     <div class="flex items-center">
-
-                    <h1 class="text colors font-bold text-4xl letter leading-tight relative mb-4 xl:mb-4  ">R</h1></br>
-                    <h1 class="text colora font-semibold text-2xl sm:text-5xl  relative mb-4 xl:mb-4  ">esources </h1>
+                    <h1 class="bottom-three"><span class="text colors font-bold text-4xl letter leading-tight relative mb-1 xl:mb-1  ">R</span><span class="text colora font-semibold text-2x1 sm:text-5xl  relative mb-1 xl:mb-1  ">esources </span></h1>
+                    <!-- <h1 class="text colors font-bold text-4xl letter leading-tight relative mb-4 xl:mb-4  ">R</h1></br>
+                    <h1 class="text colora font-semibold text-2xl sm:text-5xl  relative mb-4 xl:mb-4  ">esources </h1> -->
                 </div>
-  
-            </br> 
-                             <a href="#opening"
-                        class="mt-0 sm:mt-1 px-12 py-4 rounded-full mb-6 fold-bold text-xl coloring shadow-xl text-white border-t border-gray-200 w-auto font-bold relative self-start inline-block lg:mx-0 mx-auto">Check Out Now</a>
                         <a href="https://bsw.iitd.ac.in/forms/wheelchair.pdf"
-                        class="mt-0 sm:mt-1 px-12 py-4 rounded-full  mb-6 fold-bold text-xl coloring2 shadow-xl text-white border-t border-gray-200 w-auto font-bold relative self-start inline-block lg:mx-0 mx-auto">Wheelchair form</a>  <a href="https://bsw.iitd.ac.in/bsw_loans.php"
-                        class="mt-0 sm:mt-1 px-12 py-4 rounded-full mb-6 fold-bold text-xl coloring3 shadow-xl text-white border-t border-gray-200 w-auto font-bold relative self-start inline-block lg:mx-0 mx-auto">BSW Loans</a>                </div>
+                        class="bottom-three mt-0 sm:mt-1 px-12 py-4 rounded-full  mb-6 fold-bold text-xl coloring2 shadow-xl text-white border-t border-gray-200 w-auto font-bold relative self-start inline-block lg:mx-0 mx-auto">Wheelchair form</a>  <a href="https://bsw.iitd.ac.in/bsw_loans.php"
+                        class="bottom-three mt-0 sm:mt-1 px-12 py-4 rounded-full mb-6 fold-bold text-xl coloring3 shadow-xl text-white border-t border-gray-200 w-auto font-bold relative self-start inline-block lg:mx-0 mx-auto">BSW Loans</a>                </div>
                     <div class="lg:absolute max-w-4xl xl:max-w-6xl right-0 container lg:w-screen w-full">
                         
                         <img src="images/home1.svg"
@@ -192,29 +176,12 @@
             </div>
         </div>
         <!-- HERO SECTION END -->
-        </br>
-        </br>
-        </br>
-        </br> </br>
-        </br>
-
-        </br></br>
-   
-    </br> </br>
-    </br>
-
-    </br>
-    </br>
-        </br>
         <div class="flex justify-center">
 
-            <h1  id="opening" class= "text-semibold font-black lettermid sm:text-3xl  "> Visual impairments
-            </h1>
+            <h2  id="opening" class= "text-semibold font-black lettermid sm:text-3xl  "> Visual Impairments </h2>
             
                     </div>
                 
-            </br> </br>
-        </br> 
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap" rel="stylesheet">
 
@@ -222,9 +189,18 @@
     <div class="bg-gray-100 lg:py-12 lg:flex lg:justify-center">
         <div class="bg-white lg:mx-12 lg:flex lg:max-w-7xl lg:shadow-lg lg:rounded-lg">
             <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-8 mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
-                <h1 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Screen readers</h1>
-                <p class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-4">Screen readers have been a blessing to accommodate people with visual impairments. These provide speech or braille as an output for most applications on computers. These days, a few of the computers have built-in screen readers, and there are several compatible software doing the job.</p>
-            </div>
+                <h3 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Screen readers</h3>
+                <ol class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-4 text=justify">
+                <p class="lg:text-lg mb-4 sm:mb-2 text-blue-900 mr-4 text-justify">Screen readers have been a blessing to accommodate people with visual impairments. These provide speech or braille as an output for most applications on computers. These days, a few of the computers have built-in screen readers, and there are several compatible software doing the job.</p>
+                <p >Some of the examples of the screen readers are listed:</p>
+                <li><a href="https://www.freedomscientific.com/products/software/jaws/" target="_blank">1. JAWS</a></li>
+                <li><a href="https://www.nvaccess.org/" target="_blank">2. NVDA</a></li>
+                <li>3. Apple VoiceOver (in-built tool on Mac and iOS) </li>
+                <li>4. Microsoft Narrator (in-built tool on Windows)</li>
+                <li>5. Orca for Linux</li>
+                </ol>
+                
+             </div>
             <div class="lg:w-1/2">
                 <div class="h-64 bg-cover lg:rounded-lg lg:h-full">
                     <div class="video-container">
@@ -246,10 +222,16 @@
                       </div> 
                 </div>
             </div>
-            <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-auto mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
-                <h1 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Screen Magnifiers</h1>
-                <p class="lg:text-lg mb-4 sm:mb-12 text-blue-900">Screen Magnifiers are fully integrated magnification and reading programs tailored for low-vision users. Magnifier/Reader enlarges and enhances everything on your computer screen, echoes your typing and essential program activity, and automatically reads documents, web pages, email.</p>
-            </div>
+            <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-8 mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
+                <h3 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Screen Magnifiers</h3>
+                <ol type="1" class="lg:text-lg mb-4 sm:mb-12 mr-4 text-blue-900 mr-4 ">
+                <p class="lg:text-lg mb-4 sm:mb-2 mr-2 text-blue-900 text=justify">Screen Magnifiers are fully integrated magnification and reading programs tailored for low-vision users. Magnifier/Reader enlarges and enhances everything on your computer screen, echoes your typing and essential program activity, and automatically reads documents, web pages, email.</p>
+                <p >Some of the examples of the screen magnifier are listed:</p>
+                <li><a href="https://www.zoomtext.com/products/zoomtext-magnifierreader/" target="_blank">1. Zoom Text</a></li>
+                <li>2. Zoom (in-built on Mac and iOS)</li>
+                <li>3. Magnifier (in-built on Windows)</li>
+                </ol>
+          </div>
         </div>
     </div> 
 </div>
@@ -257,8 +239,13 @@
     <div class="bg-gray-100 lg:py-12 lg:flex lg:justify-center">
         <div class="bg-white lg:mx-12 lg:flex lg:max-w-7xl lg:shadow-lg lg:rounded-lg">
             <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-8 mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
-                <h1 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Video Magnifier</h1>
-                <p class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-4">Video magnifiers are devices that use a camera and a display screen to perform digital magnification of printed materials. These come in handy for low-vision users while looking for details or specifics while looking at a printed document or just looking around.</p>
+                <h3 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Video Magnifier</h3>
+                 <ol type="1" class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-4 ">
+                <p class="lg:text-lg mb-4 sm:mb-2 text-blue-900 mr-4 text-justify">Video magnifiers are devices that use a camera and a display screen to perform digital magnification of printed materials. These come in handy for low-vision users while looking for details or specifics while looking at a printed document or just looking around.</p>
+                <p >Some of the examples of the video magnifier are listed:</p>
+                <li><a href="https://www.freedomscientific.com/products/lowvision/ruby7/" target="_blank">1. Ruby 7HD</a></li>
+                <li><a href="https://www.ipevo.com/products" target="_blank">2. IPEVO</a></li>
+                </ol>
             </div>
             <div class="lg:w-1/2">
                 <div class="h-64 bg-cover lg:rounded-lg lg:h-full">
@@ -282,10 +269,16 @@
                       </div> 
                 </div>
             </div>
-            <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-auto mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
-                <h1 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Refreshable braille display</h1>
-                <p class="lg:text-lg mb-4 sm:mb-12 text-blue-900">A refreshable braille display is an electro-mechanical device for displaying braille characters, usually employing round-tipped pins raised through holes in a flat surface. Visually impaired users unable to use a computer monitor can use it to read text output.</p>
-            </div>
+            <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-8 mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
+                <h3 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Refreshable Braille Display</h3>
+                 <ol type="1" class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-4 ">
+                <p class="lg:text-lg mb-4 sm:mb-2 text-blue-900">A refreshable braille display is an electro-mechanical device for displaying braille characters, usually employing round-tipped pins raised through holes in a flat surface. Visually impaired users unable to use a computer monitor can use it to read text output.</p>
+                 <p >Some of the examples of the refreshable braille display are listed:</p>
+                <li><a href="https://kritikalsolutions.com/products/dotbook/" target="_blank">1. DotBook</a></li>
+                <li><a href="https://www.orbitresearch.com/en-IN/" target="_blank">2. Orbit Reader</a></li>
+                <li><a href="https://innovisiontech.co/brailleme/" target="_blank">3. Braille Me</a></li>
+                </ol>
+           </div>
         </div>
     </div> 
 </div>
@@ -293,8 +286,8 @@
     <div class="bg-gray-100 lg:py-12 lg:flex lg:justify-center">
         <div class="bg-white lg:mx-12 lg:flex lg:max-w-7xl lg:shadow-lg lg:rounded-lg">
             <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-8 mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
-                <h1 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Tactile Graphics</h1>
-                <p class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-4">Tactile graphics are images that use raised surfaces so that a visually impaired person can feel them. They are used to convey non-textual information such as maps, paintings, graphs, and diagrams. These empower the visually impaired, making them capable of understanding the mathematical/geographical and similar aspects connected to their learning.</p>
+                <h3 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Tactile Graphics</h3>
+                <p class="lg:text-lg mb-4 sm:mb-2 text-blue-900 mr-4 text-justify">Tactile graphics are images that use raised surfaces so that a visually impaired person can feel them. They are used to convey non-textual information such as maps, paintings, graphs, and diagrams. These empower the visually impaired, making them capable of understanding the mathematical/geographical and similar aspects connected to their learning.</p>
             </div>
             <div class="lg:w-1/2">
                 <div class="h-64 bg-cover lg:rounded-lg lg:h-full">
@@ -307,49 +300,44 @@
         </div>
     </div> 
 </div>
-
-
-<main class=" font-montserrat">
-    <div class="container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row relative">
-        <div class="sm:w-5/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-auto mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
-            <h1 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Refreshable Graphics Display
-            </h1>
-            <p class="lg:text-lg mb-4 sm:mb-12 text-blue-900">A Refreshable Graphics Display is an Interactive Tactile Graphics Display which provides non-visual access to any form of graphical information such as charts, drawings, flowcharts, floorplans, images and photographs, through an array of moving pins. It also features a touch interface to enable the user to “draw” on the display; tracing a shape with a fingertip raises the pins along the path traced.
-
-            </p>
+<div>
+    <div class="bg-gray-100 lg:py-12 lg:flex lg:justify-center">
+        <div class="bg-white lg:mx-12 lg:flex lg:max-w-7xl lg:shadow-lg lg:rounded-lg">
+            <div class="lg:w-1/2">
+                <div class="h-64 bg-cover lg:rounded-lg lg:h-full">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/Em2x4b2G_Cw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div> 
+                </div>
+            </div>
+            <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-8 mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
+                <h3 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Accessible Scientific Editor</h3>
+                <ol type="1" class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-4 ">
+                <p class="lg:text-lg mb-4 sm:mb-2 text-blue-900 text=justify">Accessible scientific editors are specifically designed mathematical document editors for visually disabled people to read and write scientific documents along with features of speech output of symbols and math structure. They support math expressions from secondary to university level mathematics.
+</p>
+                <p >The example of the accessible scientific editor is listed:</p>
+                <li><a href="https://www.sciaccess.net/en/ChattyInfty/" target="_blank">1. ChattyInfty</a></li>
+                </ol>
+            </div>
         </div>
-        <div class="sm:w-7/12 relative z-10">
-        <img src= "images/6.svg">       </div>
-       
-    </div>
-</main>
-<main class=" font-montserrat">
-    <div class="min-w-0 p-4  coloring1">
+    </div> 
+</div>
 
-    <div class="container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row relative">
-        <div class="sm:w-5/12 relative z-10">
-        <img src= "images/7.svg">       </div>
-        <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-auto mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
-            <h1 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Accessible Scientific Editor</h1>
-            <p class="lg:text-lg mb-4 sm:mb-12 text-blue-900">Accessible Scientific Editors are specifically designed mathematical document editors for visually disabled people to read and write scientific documents along with features of speech output of symbols and math structure. They support math expressions from secondary to university level mathematics.
-
-            </p>
-        </div>
-    </div>
-    </div>
-    
-</main>
 <div>
     <div class="bg-gray-100 lg:py-12 lg:flex lg:justify-center">
         <div class="bg-white lg:mx-12 lg:flex lg:max-w-7xl lg:shadow-lg lg:rounded-lg">
             <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-8 mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
-                <h1 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Talking Scientific Calculator</h1>
-                <p class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-4">Talking Scientific Calculator provides high-quality synthesized-speech that reads out all textual and symbolic information. Accompanied with unique audio access to graphs through speech output of graph parameters and has ability to output all text as braille script when connected with appropriate devices.</p>
-            </div>
+                <h3 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Talking Scientific Calculator</h3>
+                 <ol type="1" class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-4 ">
+                <p class="lg:text-lg mb-4 sm:mb-2 text-blue-900 mr-4 text-justify">Talking scientific calculator provides high-quality synthesized-speech that reads out all textual and symbolic information. Accompanied with unique audio access to graphs through speech output of graph parameters and has ability to output all text as braille script when connected with appropriate devices.</p>
+                 <p >The example of the Talking Scientific Calculator is listed:</p>
+                <li><a href="https://www.orbitresearch.com/en-IN/" target="_blank">1. Orion T1-84 plus</a></li>
+                </ol>
+              </div>
             <div class="lg:w-1/2">
                 <div class="h-64 bg-cover lg:rounded-lg lg:h-full">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/O_7cr6j0cOk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/SFirZv2Oyr4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                       </div> 
                 </div>
             </div>
@@ -360,19 +348,89 @@
 
 <div class="flex justify-center">
 
-    <h1  class= "text-semibold font-black lettermid sm:text-3xl  "> Hearing Impairments
-    </h1>
+    <h2 id="opening" class= "text-semibold font-black lettermid sm:text-3xl "> Hearing Impairments
+    </h2>
     
             </div>
-            <div class="flex justify-center">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap" rel="stylesheet">
+            <link href = "style1.css" rel="stylesheet"/> 
 
-                <h2  class= "text-gray-800 ml-16 mb-2 mr-16 text-2xl	dark:text-gray-800 "> Personal sound amplifying products are designed to boost people's environmental hearing without hearing loss. They aren't selective in what sounds they amplify and help the people accommodating hearing impairments.  </h2>
+                <div>
+    <div class="bg-gray-100 lg:py-12 lg:flex lg:justify-center">
+     
+        <div class="bg-white lg:mx-12 lg:flex lg:max-w-7xl lg:shadow-lg lg:rounded-lg">
+           <div class="lg:w-1/2">
+                <div class="h-64 bg-cover lg:rounded-lg lg:h-full">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/yozzdSLGO6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div> 
+                </div>
             </div>
-    </br> </br>
-</br> 
 
- 
-        <!-- a little JS for the mobile nav button -->
+            <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-8 mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
+                <h3 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Google Sound Amplifier</h3>
+                
+                <p class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-4 text-justify">Sound Amplifier enhances audio from your Android device, using headphones to improve listening clarity.Sound Amplifier increases important sounds, like conversations, without over-boosting distracting noises. With two simple sliders, you can quickly customize sound enhancement and reduce background noise.
+                 You can download this application using the below link.
+                
+                </br><a href = "https://play.google.com/store/apps/details?id=com.google.android.accessibility.soundamplifier" target="_blank" >Google Sound Amplifier App</a></p>
+            </div>
+            
+            
+        </div>
+    </div> 
+</div>
+<div class="flex justify-center">
+
+    <h2 id="opening" class= "text-semibold font-black lettermid sm:text-3xl "> Motor Impairments
+    </h2>
+    
+            </div>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap" rel="stylesheet">
+<div>
+    <div class="bg-gray-100 lg:py-12 lg:flex lg:justify-center">
+        <div class="bg-white lg:mx-12 lg:flex lg:max-w-7xl lg:shadow-lg lg:rounded-lg">
+            <div class="sm:w-7/12 xl:w-5/12 flex flex-col items-start  sm:text-left ml-8 mt-8 sm:mt-0 relative z-10 xl:pt-20 mb-16 sm:mb-0">
+                <h3 class="text-4xl lg:text-5xl text-black leading-none mb-4 font-black">Speech-To-Text</h3>
+                 <ol type="1" class="lg:text-lg mb-4 sm:mb-12 text-blue-900 mr-4 ">
+                <p class="lg:text-lg mb-4 sm:mb-2 text-blue-900 mr-4 text-justify">Speech to text conversion is the process of converting spoken words into written texts. A speech-to-text system can be categorized based in its use: command and control, dialog system, text dictation, audio document transcription, etc. Each use has specific requirements in terms of latency, memory constraints, vocabulary size, and adaptive features.</p>
+                 <p >Some of the examples of the speech-to-text are listed:</p>
+                 <li><a href="https://www.nuance.com/dragon/support/dragon-naturallyspeaking.html" target="_blank">1. Dragon Naturally Speaking</a></li>
+                <li>2. Google Voice Typing</li>
+                 <li>3. Mac Dictation (in-built tool on Mac and iOS)</li>
+                <li>4. Windows Speech Recognition (in-built tool on Windows)</li>
+                <li>5. Talk&amp;Type – (within Read&amp;Write)</li>
+                <li>6. Dictate (within Office 365)</li>
+                </ol>
+              </div>
+            <div class="lg:w-1/2">
+                <div class="h-64 bg-cover lg:rounded-lg lg:h-full">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/-Ski4VtqYAY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div> 
+                </div>
+            </div>
+            
+            
+        </div>
+    </div> 
+</div>
+
+<div class="flex justify-center">
+<h2 id="opening" class= "text-semibold font-black lettermid sm:text-3xl "> Financial Aid
+    </h2>
+ </div> 
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap" rel="stylesheet">
+<div>
+
+       <div class="bg-gray-100 lg:py-12 lg:flex lg:justify-center">
+        <div class="bg-white lg:mx-12 lg:flex lg:max-w-7xl lg:shadow-lg lg:rounded-lg">
+      <p class="lg:text-lg mb-4 sm:mb-2 text-blue-900 ml-16 mb-1 mr-4 text-xl text:justify">With the objective to empower differently-abled students, a number of schemes and scholarships for students with benchmark disability have been provided by the IIT-Delhi. Here list of pdf are attached of the schemes and scholarships provided for the benefits of the disable students.
+        </br><a href="files/advertisement in english 2020-21">1. Government scholarship 2020-21</a>
+        </br><a href="files/Government Scholarship 2017-2018">2. Government scholarship 2017-18</a> </p>
+      </div>
+</div>
+       <!-- a little JS for the mobile nav button -->
         <script>
             if (document.getElementById('nav-mobile-btn')) {
                 document.getElementById('nav-mobile-btn').addEventListener('click', function () {
